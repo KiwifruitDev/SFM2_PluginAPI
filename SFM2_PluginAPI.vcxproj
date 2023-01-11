@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{87af4884-1920-477e-ac4d-d04f36343aa0}</ProjectGuid>
+    <RootNamespace>SFM2_PluginAPI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;SFM2_PluginAPI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;SPTLib\Windows\minhook\include;$(QTDIR)\include;$(QTDIR)\include\ActiveQt;$(QTDIR)\include\Qt3DAnimation;$(QTDIR)\include\Qt3DCore;$(QTDIR)\include\Qt3DExtras;$(QTDIR)\include\Qt3DInput;$(QTDIR)\include\Qt3DLogic;$(QTDIR)\include\Qt3DQuick;$(QTDIR)\include\Qt3DQuickAnimation;$(QTDIR)\include\Qt3DQuickExtras;$(QTDIR)\include\Qt3DQuickInput;$(QTDIR)\include\Qt3DQuickRender;$(QTDIR)\include\Qt3DQuickScene2D;$(QTDIR)\include\Qt3DRender;$(QTDIR)\include\QtAccessibilitySupport;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtBluetooth;$(QTDIR)\include\QtBodymovin;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtDataVisualization;$(QTDIR)\include\QtDBus;$(QTDIR)\include\QtDesigner;$(QTDIR)\include\QtDesignerComponents;$(QTDIR)\include\QtDeviceDiscoverySupport;$(QTDIR)\include\QtEdidSupport;$(QTDIR)\include\QtEglSupport;$(QTDIR)\include\QtEventDispatcherSupport;$(QTDIR)\include\QtFbSupport;$(QTDIR)\include\QtFontDatabaseSupport;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtHelp;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtNetworkAuth;$(QTDIR)\include\QtNfc;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtPacketProtocol;$(QTDIR)\include\QtPlatformCompositorSupport;$(QTDIR)\include\QtPlatformHeaders;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtPositioningQuick;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtPurchasing;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtQmlDebug;$(QTDIR)\include\QtQmlModels;$(QTDIR)\include\QtQmlWorkerScript;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtQuick3D;$(QTDIR)\include\QtQuick3DAssetImport;$(QTDIR)\include\QtQuick3DRender;$(QTDIR)\include\QtQuick3DRuntimeRender;$(QTDIR)\include\QtQuick3DUtils;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuickParticles;$(QTDIR)\include\QtQuickShapes;$(QTDIR)\include\QtQuickTemplates2;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtRemoteObjects;$(QTDIR)\include\QtRepParser;$(QTDIR)\include\QtScript;$(QTDIR)\include\QtScriptTools;$(QTDIR)\include\QtScxml;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtSerialBus;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtTextToSpeech;$(QTDIR)\include\QtThemeSupport;$(QTDIR)\include\QtUiPlugin;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtVirtualKeyboard;$(QTDIR)\include\QtVulkanSupport;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWindowsUIAutomationSupport;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;$(QTDIR)\include\QtZlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>SFM2_PluginAPI.def</ModuleDefinitionFile>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;Qt53DAnimation.lib;Qt53DCore.lib;Qt53DExtras.lib;Qt53DInput.lib;Qt53DLogic.lib;Qt53DQuick.lib;Qt53DQuickAnimation.lib;Qt53DQuickExtras.lib;Qt53DQuickInput.lib;Qt53DQuickRender.lib;Qt53DRender.lib;Qt5AccessibilitySupport.lib;Qt5AxBase.lib;Qt5AxContainer.lib;Qt5AxServer.lib;Qt5Bluetooth.lib;Qt5Bodymovin.lib;Qt5Bootstrap.lib;Qt5Charts.lib;Qt5Concurrent.lib;Qt5Core.lib;Qt5DataVisualization.lib;Qt5DBus.lib;Qt5Designer.lib;Qt5DesignerComponents.lib;Qt5DeviceDiscoverySupport.lib;Qt5EdidSupport.lib;Qt5EglSupport.lib;Qt5EventDispatcherSupport.lib;Qt5FbSupport.lib;Qt5FontDatabaseSupport.lib;Qt5Gui.lib;Qt5Help.lib;Qt5Location.lib;Qt5Multimedia.lib;Qt5MultimediaQuick.lib;Qt5MultimediaWidgets.lib;Qt5Network.lib;Qt5NetworkAuth.lib;Qt5Nfc.lib;Qt5OpenGL.lib;Qt5OpenGLExtensions.lib;Qt5PacketProtocol.lib;Qt5Pdf.lib;Qt5PdfWidgets.lib;Qt5PlatformCompositorSupport.lib;Qt5Positioning.lib;Qt5PositioningQuick.lib;Qt5PrintSupport.lib;Qt5Purchasing.lib;Qt5Qml.lib;Qt5QmlDebug.lib;Qt5QmlDevTools.lib;Qt5QmlModels.lib;Qt5QmlWorkerScript.lib;Qt5Quick.lib;Qt5Quick3DAssetImport.lib;Qt5Quick3DRender.lib;Qt5Quick3DRuntimeRender.lib;Qt5Quick3DUtils.lib;Qt5QuickControls2.lib;Qt5QuickParticles.lib;Qt5QuickShapes.lib;Qt5QuickTemplates2.lib;Qt5QuickTest.lib;Qt5QuickWidgets.lib;Qt5RemoteObjects.lib;Qt5Script.lib;Qt5ScriptTools.lib;Qt5Scxml.lib;Qt5Sensors.lib;Qt5SerialBus.lib;Qt5SerialPort.lib;Qt5Sql.lib;Qt5Svg.lib;Qt5Test.lib;Qt5TextToSpeech.lib;Qt5ThemeSupport.lib;Qt5UiTools.lib;Qt5VulkanSupport.lib;Qt5WebChannel.lib;Qt5WebEngine.lib;Qt5WebEngineCore.lib;Qt5WebEngineWidgets.lib;Qt5WebSockets.lib;Qt5WebView.lib;Qt5Widgets.lib;Qt5WindowsUIAutomationSupport.lib;Qt5WinExtras.lib;Qt5Xml.lib;Qt5XmlPatterns.lib;qtfreetype.lib;qtlibpng.lib;qtmain.lib;$(CoreLibraryDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBC;LIBCD;LIBCMTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)$(Configuration)\$(ProjectName).dll" "$(SOURCE2-GAME)\bin\tools"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;SFM2_PluginAPI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;SPTLib\Windows\minhook\include;$(QTDIR)\include;$(QTDIR)\include\ActiveQt;$(QTDIR)\include\Qt3DAnimation;$(QTDIR)\include\Qt3DCore;$(QTDIR)\include\Qt3DExtras;$(QTDIR)\include\Qt3DInput;$(QTDIR)\include\Qt3DLogic;$(QTDIR)\include\Qt3DQuick;$(QTDIR)\include\Qt3DQuickAnimation;$(QTDIR)\include\Qt3DQuickExtras;$(QTDIR)\include\Qt3DQuickInput;$(QTDIR)\include\Qt3DQuickRender;$(QTDIR)\include\Qt3DQuickScene2D;$(QTDIR)\include\Qt3DRender;$(QTDIR)\include\QtAccessibilitySupport;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtBluetooth;$(QTDIR)\include\QtBodymovin;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtDataVisualization;$(QTDIR)\include\QtDBus;$(QTDIR)\include\QtDesigner;$(QTDIR)\include\QtDesignerComponents;$(QTDIR)\include\QtDeviceDiscoverySupport;$(QTDIR)\include\QtEdidSupport;$(QTDIR)\include\QtEglSupport;$(QTDIR)\include\QtEventDispatcherSupport;$(QTDIR)\include\QtFbSupport;$(QTDIR)\include\QtFontDatabaseSupport;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtHelp;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtNetworkAuth;$(QTDIR)\include\QtNfc;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtPacketProtocol;$(QTDIR)\include\QtPlatformCompositorSupport;$(QTDIR)\include\QtPlatformHeaders;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtPositioningQuick;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtPurchasing;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtQmlDebug;$(QTDIR)\include\QtQmlModels;$(QTDIR)\include\QtQmlWorkerScript;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtQuick3D;$(QTDIR)\include\QtQuick3DAssetImport;$(QTDIR)\include\QtQuick3DRender;$(QTDIR)\include\QtQuick3DRuntimeRender;$(QTDIR)\include\QtQuick3DUtils;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuickParticles;$(QTDIR)\include\QtQuickShapes;$(QTDIR)\include\QtQuickTemplates2;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtRemoteObjects;$(QTDIR)\include\QtRepParser;$(QTDIR)\include\QtScript;$(QTDIR)\include\QtScriptTools;$(QTDIR)\include\QtScxml;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtSerialBus;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtTextToSpeech;$(QTDIR)\include\QtThemeSupport;$(QTDIR)\include\QtUiPlugin;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtVirtualKeyboard;$(QTDIR)\include\QtVulkanSupport;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWindowsUIAutomationSupport;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;$(QTDIR)\include\QtZlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>SFM2_PluginAPI.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;Qt53DAnimation.lib;Qt53DCore.lib;Qt53DExtras.lib;Qt53DInput.lib;Qt53DLogic.lib;Qt53DQuick.lib;Qt53DQuickAnimation.lib;Qt53DQuickExtras.lib;Qt53DQuickInput.lib;Qt53DQuickRender.lib;Qt53DRender.lib;Qt5AccessibilitySupport.lib;Qt5AxBase.lib;Qt5AxContainer.lib;Qt5AxServer.lib;Qt5Bluetooth.lib;Qt5Bodymovin.lib;Qt5Bootstrap.lib;Qt5Charts.lib;Qt5Concurrent.lib;Qt5Core.lib;Qt5DataVisualization.lib;Qt5DBus.lib;Qt5Designer.lib;Qt5DesignerComponents.lib;Qt5DeviceDiscoverySupport.lib;Qt5EdidSupport.lib;Qt5EglSupport.lib;Qt5EventDispatcherSupport.lib;Qt5FbSupport.lib;Qt5FontDatabaseSupport.lib;Qt5Gui.lib;Qt5Help.lib;Qt5Location.lib;Qt5Multimedia.lib;Qt5MultimediaQuick.lib;Qt5MultimediaWidgets.lib;Qt5Network.lib;Qt5NetworkAuth.lib;Qt5Nfc.lib;Qt5OpenGL.lib;Qt5OpenGLExtensions.lib;Qt5PacketProtocol.lib;Qt5Pdf.lib;Qt5PdfWidgets.lib;Qt5PlatformCompositorSupport.lib;Qt5Positioning.lib;Qt5PositioningQuick.lib;Qt5PrintSupport.lib;Qt5Purchasing.lib;Qt5Qml.lib;Qt5QmlDebug.lib;Qt5QmlDevTools.lib;Qt5QmlModels.lib;Qt5QmlWorkerScript.lib;Qt5Quick.lib;Qt5Quick3DAssetImport.lib;Qt5Quick3DRender.lib;Qt5Quick3DRuntimeRender.lib;Qt5Quick3DUtils.lib;Qt5QuickControls2.lib;Qt5QuickParticles.lib;Qt5QuickShapes.lib;Qt5QuickTemplates2.lib;Qt5QuickTest.lib;Qt5QuickWidgets.lib;Qt5RemoteObjects.lib;Qt5Script.lib;Qt5ScriptTools.lib;Qt5Scxml.lib;Qt5Sensors.lib;Qt5SerialBus.lib;Qt5SerialPort.lib;Qt5Sql.lib;Qt5Svg.lib;Qt5Test.lib;Qt5TextToSpeech.lib;Qt5ThemeSupport.lib;Qt5UiTools.lib;Qt5VulkanSupport.lib;Qt5WebChannel.lib;Qt5WebEngine.lib;Qt5WebEngineCore.lib;Qt5WebEngineWidgets.lib;Qt5WebSockets.lib;Qt5WebView.lib;Qt5Widgets.lib;Qt5WindowsUIAutomationSupport.lib;Qt5WinExtras.lib;Qt5Xml.lib;Qt5XmlPatterns.lib;qtfreetype.lib;qtlibpng.lib;qtmain.lib;$(CoreLibraryDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)$(Configuration)\$(ProjectName).dll" "$(SOURCE2-GAME)\bin\tools"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;SFM2_PluginAPI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;SPTLib\Windows\minhook\include;$(QTDIR)\include;$(QTDIR)\include\ActiveQt;$(QTDIR)\include\Qt3DAnimation;$(QTDIR)\include\Qt3DCore;$(QTDIR)\include\Qt3DExtras;$(QTDIR)\include\Qt3DInput;$(QTDIR)\include\Qt3DLogic;$(QTDIR)\include\Qt3DQuick;$(QTDIR)\include\Qt3DQuickAnimation;$(QTDIR)\include\Qt3DQuickExtras;$(QTDIR)\include\Qt3DQuickInput;$(QTDIR)\include\Qt3DQuickRender;$(QTDIR)\include\Qt3DQuickScene2D;$(QTDIR)\include\Qt3DRender;$(QTDIR)\include\QtAccessibilitySupport;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtBluetooth;$(QTDIR)\include\QtBodymovin;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtDataVisualization;$(QTDIR)\include\QtDBus;$(QTDIR)\include\QtDesigner;$(QTDIR)\include\QtDesignerComponents;$(QTDIR)\include\QtDeviceDiscoverySupport;$(QTDIR)\include\QtEdidSupport;$(QTDIR)\include\QtEglSupport;$(QTDIR)\include\QtEventDispatcherSupport;$(QTDIR)\include\QtFbSupport;$(QTDIR)\include\QtFontDatabaseSupport;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtHelp;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtNetworkAuth;$(QTDIR)\include\QtNfc;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtPacketProtocol;$(QTDIR)\include\QtPlatformCompositorSupport;$(QTDIR)\include\QtPlatformHeaders;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtPositioningQuick;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtPurchasing;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtQmlDebug;$(QTDIR)\include\QtQmlModels;$(QTDIR)\include\QtQmlWorkerScript;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtQuick3D;$(QTDIR)\include\QtQuick3DAssetImport;$(QTDIR)\include\QtQuick3DRender;$(QTDIR)\include\QtQuick3DRuntimeRender;$(QTDIR)\include\QtQuick3DUtils;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuickParticles;$(QTDIR)\include\QtQuickShapes;$(QTDIR)\include\QtQuickTemplates2;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtRemoteObjects;$(QTDIR)\include\QtRepParser;$(QTDIR)\include\QtScript;$(QTDIR)\include\QtScriptTools;$(QTDIR)\include\QtScxml;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtSerialBus;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtTextToSpeech;$(QTDIR)\include\QtThemeSupport;$(QTDIR)\include\QtUiPlugin;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtVirtualKeyboard;$(QTDIR)\include\QtVulkanSupport;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWindowsUIAutomationSupport;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;$(QTDIR)\include\QtZlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>SFM2_PluginAPI.def</ModuleDefinitionFile>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;Qt53DAnimation.lib;Qt53DCore.lib;Qt53DExtras.lib;Qt53DInput.lib;Qt53DLogic.lib;Qt53DQuick.lib;Qt53DQuickAnimation.lib;Qt53DQuickExtras.lib;Qt53DQuickInput.lib;Qt53DQuickRender.lib;Qt53DRender.lib;Qt5AccessibilitySupport.lib;Qt5AxBase.lib;Qt5AxContainer.lib;Qt5AxServer.lib;Qt5Bluetooth.lib;Qt5Bodymovin.lib;Qt5Bootstrap.lib;Qt5Charts.lib;Qt5Concurrent.lib;Qt5Core.lib;Qt5DataVisualization.lib;Qt5DBus.lib;Qt5Designer.lib;Qt5DesignerComponents.lib;Qt5DeviceDiscoverySupport.lib;Qt5EdidSupport.lib;Qt5EglSupport.lib;Qt5EventDispatcherSupport.lib;Qt5FbSupport.lib;Qt5FontDatabaseSupport.lib;Qt5Gui.lib;Qt5Help.lib;Qt5Location.lib;Qt5Multimedia.lib;Qt5MultimediaQuick.lib;Qt5MultimediaWidgets.lib;Qt5Network.lib;Qt5NetworkAuth.lib;Qt5Nfc.lib;Qt5OpenGL.lib;Qt5OpenGLExtensions.lib;Qt5PacketProtocol.lib;Qt5Pdf.lib;Qt5PdfWidgets.lib;Qt5PlatformCompositorSupport.lib;Qt5Positioning.lib;Qt5PositioningQuick.lib;Qt5PrintSupport.lib;Qt5Purchasing.lib;Qt5Qml.lib;Qt5QmlDebug.lib;Qt5QmlDevTools.lib;Qt5QmlModels.lib;Qt5QmlWorkerScript.lib;Qt5Quick.lib;Qt5Quick3DAssetImport.lib;Qt5Quick3DRender.lib;Qt5Quick3DRuntimeRender.lib;Qt5Quick3DUtils.lib;Qt5QuickControls2.lib;Qt5QuickParticles.lib;Qt5QuickShapes.lib;Qt5QuickTemplates2.lib;Qt5QuickTest.lib;Qt5QuickWidgets.lib;Qt5RemoteObjects.lib;Qt5Script.lib;Qt5ScriptTools.lib;Qt5Scxml.lib;Qt5Sensors.lib;Qt5SerialBus.lib;Qt5SerialPort.lib;Qt5Sql.lib;Qt5Svg.lib;Qt5Test.lib;Qt5TextToSpeech.lib;Qt5ThemeSupport.lib;Qt5UiTools.lib;Qt5VulkanSupport.lib;Qt5WebChannel.lib;Qt5WebEngine.lib;Qt5WebEngineCore.lib;Qt5WebEngineWidgets.lib;Qt5WebSockets.lib;Qt5WebView.lib;Qt5Widgets.lib;Qt5WindowsUIAutomationSupport.lib;Qt5WinExtras.lib;Qt5Xml.lib;Qt5XmlPatterns.lib;qtfreetype.lib;qtlibpng.lib;qtmain.lib;$(CoreLibraryDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).dll" "$(SOURCE2-GAME)\bin\win64\tools"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;SFM2_PluginAPI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;SPTLib\Windows\minhook\include;$(QTDIR)\include;$(QTDIR)\include\ActiveQt;$(QTDIR)\include\Qt3DAnimation;$(QTDIR)\include\Qt3DCore;$(QTDIR)\include\Qt3DExtras;$(QTDIR)\include\Qt3DInput;$(QTDIR)\include\Qt3DLogic;$(QTDIR)\include\Qt3DQuick;$(QTDIR)\include\Qt3DQuickAnimation;$(QTDIR)\include\Qt3DQuickExtras;$(QTDIR)\include\Qt3DQuickInput;$(QTDIR)\include\Qt3DQuickRender;$(QTDIR)\include\Qt3DQuickScene2D;$(QTDIR)\include\Qt3DRender;$(QTDIR)\include\QtAccessibilitySupport;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtBluetooth;$(QTDIR)\include\QtBodymovin;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtDataVisualization;$(QTDIR)\include\QtDBus;$(QTDIR)\include\QtDesigner;$(QTDIR)\include\QtDesignerComponents;$(QTDIR)\include\QtDeviceDiscoverySupport;$(QTDIR)\include\QtEdidSupport;$(QTDIR)\include\QtEglSupport;$(QTDIR)\include\QtEventDispatcherSupport;$(QTDIR)\include\QtFbSupport;$(QTDIR)\include\QtFontDatabaseSupport;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtHelp;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtNetworkAuth;$(QTDIR)\include\QtNfc;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtPacketProtocol;$(QTDIR)\include\QtPlatformCompositorSupport;$(QTDIR)\include\QtPlatformHeaders;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtPositioningQuick;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtPurchasing;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtQmlDebug;$(QTDIR)\include\QtQmlModels;$(QTDIR)\include\QtQmlWorkerScript;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtQuick3D;$(QTDIR)\include\QtQuick3DAssetImport;$(QTDIR)\include\QtQuick3DRender;$(QTDIR)\include\QtQuick3DRuntimeRender;$(QTDIR)\include\QtQuick3DUtils;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuickParticles;$(QTDIR)\include\QtQuickShapes;$(QTDIR)\include\QtQuickTemplates2;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtRemoteObjects;$(QTDIR)\include\QtRepParser;$(QTDIR)\include\QtScript;$(QTDIR)\include\QtScriptTools;$(QTDIR)\include\QtScxml;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtSerialBus;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtTextToSpeech;$(QTDIR)\include\QtThemeSupport;$(QTDIR)\include\QtUiPlugin;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtVirtualKeyboard;$(QTDIR)\include\QtVulkanSupport;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWindowsUIAutomationSupport;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;$(QTDIR)\include\QtZlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>SFM2_PluginAPI.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;Qt53DAnimation.lib;Qt53DCore.lib;Qt53DExtras.lib;Qt53DInput.lib;Qt53DLogic.lib;Qt53DQuick.lib;Qt53DQuickAnimation.lib;Qt53DQuickExtras.lib;Qt53DQuickInput.lib;Qt53DQuickRender.lib;Qt53DRender.lib;Qt5AccessibilitySupport.lib;Qt5AxBase.lib;Qt5AxContainer.lib;Qt5AxServer.lib;Qt5Bluetooth.lib;Qt5Bodymovin.lib;Qt5Bootstrap.lib;Qt5Charts.lib;Qt5Concurrent.lib;Qt5Core.lib;Qt5DataVisualization.lib;Qt5DBus.lib;Qt5Designer.lib;Qt5DesignerComponents.lib;Qt5DeviceDiscoverySupport.lib;Qt5EdidSupport.lib;Qt5EglSupport.lib;Qt5EventDispatcherSupport.lib;Qt5FbSupport.lib;Qt5FontDatabaseSupport.lib;Qt5Gui.lib;Qt5Help.lib;Qt5Location.lib;Qt5Multimedia.lib;Qt5MultimediaQuick.lib;Qt5MultimediaWidgets.lib;Qt5Network.lib;Qt5NetworkAuth.lib;Qt5Nfc.lib;Qt5OpenGL.lib;Qt5OpenGLExtensions.lib;Qt5PacketProtocol.lib;Qt5Pdf.lib;Qt5PdfWidgets.lib;Qt5PlatformCompositorSupport.lib;Qt5Positioning.lib;Qt5PositioningQuick.lib;Qt5PrintSupport.lib;Qt5Purchasing.lib;Qt5Qml.lib;Qt5QmlDebug.lib;Qt5QmlDevTools.lib;Qt5QmlModels.lib;Qt5QmlWorkerScript.lib;Qt5Quick.lib;Qt5Quick3DAssetImport.lib;Qt5Quick3DRender.lib;Qt5Quick3DRuntimeRender.lib;Qt5Quick3DUtils.lib;Qt5QuickControls2.lib;Qt5QuickParticles.lib;Qt5QuickShapes.lib;Qt5QuickTemplates2.lib;Qt5QuickTest.lib;Qt5QuickWidgets.lib;Qt5RemoteObjects.lib;Qt5Script.lib;Qt5ScriptTools.lib;Qt5Scxml.lib;Qt5Sensors.lib;Qt5SerialBus.lib;Qt5SerialPort.lib;Qt5Sql.lib;Qt5Svg.lib;Qt5Test.lib;Qt5TextToSpeech.lib;Qt5ThemeSupport.lib;Qt5UiTools.lib;Qt5VulkanSupport.lib;Qt5WebChannel.lib;Qt5WebEngine.lib;Qt5WebEngineCore.lib;Qt5WebEngineWidgets.lib;Qt5WebSockets.lib;Qt5WebView.lib;Qt5Widgets.lib;Qt5WindowsUIAutomationSupport.lib;Qt5WinExtras.lib;Qt5Xml.lib;Qt5XmlPatterns.lib;qtfreetype.lib;qtlibpng.lib;qtmain.lib;$(CoreLibraryDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).dll" "$(SOURCE2-GAME)\bin\win64\tools"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="SFM2_PluginAPI.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="feature.hpp" />
+    <ClInclude Include="helpers.hpp" />
+    <ClInclude Include="pch.hpp" />
+    <ClInclude Include="SPTLib\Hooks.hpp" />
+    <ClInclude Include="SPTLib\IHookableDirFilter.hpp" />
+    <ClInclude Include="SPTLib\IHookableModule.hpp" />
+    <ClInclude Include="SPTLib\IHookableNameFilter.hpp" />
+    <ClInclude Include="SPTLib\IHookableNameFilterOrdered.hpp" />
+    <ClInclude Include="SPTLib\MemUtils.hpp" />
+    <ClInclude Include="SPTLib\patterns.hpp" />
+    <ClInclude Include="SPTLib\patterns_macros.hpp" />
+    <ClInclude Include="SPTLib\sptlib-stdafx.hpp" />
+    <ClInclude Include="SPTLib\sptlib.hpp" />
+    <ClInclude Include="SPTLib\Windows\DetoursUtils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="feature.cpp" />
+    <ClCompile Include="features\test.cpp" />
+    <ClCompile Include="helpers.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Hooks.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableDirFilter.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableModule.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableNameFilter.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableNameFilterOrdered.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SPTLib\MemUtils.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SPTLib\sptlib-stdafx.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SPTLib\sptlib.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Windows\DetoursUtils.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Windows\Hooks_win.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Windows\MemUtils_win.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="SPTLib\Windows\minhook\build\VC17\libMinHook.vcxproj">
+      <Project>{f142a341-5ee0-442d-a15f-98ae9b48dbae}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

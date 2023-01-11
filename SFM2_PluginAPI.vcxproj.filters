@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="feature.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="features\test.cpp">
+      <Filter>features</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Hooks.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableDirFilter.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableModule.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableNameFilter.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableNameFilterOrdered.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\MemUtils.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\sptlib.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\sptlib-stdafx.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Windows\DetoursUtils.cpp">
+      <Filter>SPTLib\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Windows\Hooks_win.cpp">
+      <Filter>SPTLib\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Windows\MemUtils_win.cpp">
+      <Filter>SPTLib\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="helpers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="feature.hpp" />
+    <ClInclude Include="pch.hpp" />
+    <ClInclude Include="helpers.hpp" />
+    <ClInclude Include="SPTLib\Hooks.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\IHookableDirFilter.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\IHookableModule.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\IHookableNameFilter.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\IHookableNameFilterOrdered.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\MemUtils.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\patterns.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\patterns_macros.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\sptlib.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\sptlib-stdafx.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\Windows\DetoursUtils.hpp">
+      <Filter>SPTLib\Windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SFM2_PluginAPI.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="features">
+      <UniqueIdentifier>{ca2379c3-536c-43ed-a492-7623657e07f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SPTLib">
+      <UniqueIdentifier>{391cb0a0-f283-4b67-958c-562cbc003279}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SPTLib\Windows">
+      <UniqueIdentifier>{e89d6caf-1ac3-4abc-a6de-c6e9c4188b87}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

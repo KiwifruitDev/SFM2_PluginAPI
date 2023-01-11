@@ -1,0 +1,8 @@
+LIBRARY
+EXPORTS
+	BinaryProperties_GetValue
+	CreateInterface
+	GetResourceManifestCount
+	GetResourceManifests
+	InstallSchemaBindings
+	NvOptimusEnablement
