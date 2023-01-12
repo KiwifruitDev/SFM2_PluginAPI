@@ -28,6 +28,10 @@
 
 #pragma once
 
+#include <QtCore>
+#include <QtGui>
+#include <QtWidgets>
+
 typedef void(*_Msg)(const char* msg);
 typedef void(*_MsgFormat)(const char* format, ...);
 
@@ -38,6 +42,7 @@ typedef void(*_MsgFormat)(const char* format, ...);
 class Helpers
 {
 public:
+	QMainWindow* mainWindow;
 };
 
 static Helpers* globalHelpers = new Helpers();
